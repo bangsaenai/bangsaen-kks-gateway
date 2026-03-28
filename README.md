@@ -38,3 +38,17 @@ JSON
   "latency_ms": "0.12 ms",
   "engine": "Bangsaen KKS Core v1.0.5"
 }
+🏢 100% Offline On-Premise (Enterprise Vault)
+The Cloud Beta is for demonstration only.
+For Banks, Hospitals, and Defense sectors, we offer the True On-Premise Docker Vault.
+
+Zero Internet: Runs completely offline on your internal network.
+
+Lightweight: Runs on a $5 Microcontroller or basic CPU.
+
+Absolute Privacy: Your data never leaves your infrastructure.
+
+📩 Request an Enterprise Trial: Contact drtanet@bangsaenai.com (Please use your official company email).
+
+Built with pure mathematics by Bangsaen AI.
+
