@@ -27,6 +27,8 @@ payload = {"text": "Initiate wire transfer to account 123-4-56789. Amount: 50,00
 
 response = requests.post(API_URL, json=payload, headers=headers)
 print(response.json())
+```
+---
 🛑 Expected Response:
 JSON
 {
@@ -38,6 +40,7 @@ JSON
   "latency_ms": "0.12 ms",
   "engine": "Bangsaen KKS Core v1.0.5"
 }
+---
 🏢 100% Offline On-Premise (Enterprise Vault)
 The Cloud Beta is for demonstration only.
 For Banks, Hospitals, and Defense sectors, we offer the True On-Premise Docker Vault.
