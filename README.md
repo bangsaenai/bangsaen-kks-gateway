@@ -19,7 +19,7 @@ Our core engine detects prompt injections, hidden digits, and adversarial PII pa
 ```python
 import requests
 
-API_URL = "[https://bangsaen-gateway-beta-653731256449.asia-southeast1.run.app/analyze](https://bangsaen-gateway-beta-653731256449.asia-southeast1.run.app/analyze)"
+API_URL = "https://bangsaen-gateway-beta-653731256449.asia-southeast1.run.app/analyze"
 API_KEY = "BSGW-FREE-DEMO"
 
 headers = {"X-API-Key": API_KEY, "Content-Type": "application/json"}
