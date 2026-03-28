@@ -20,7 +20,7 @@ Our core engine detects prompt injections, hidden digits, and adversarial PII pa
 import requests
 
 API_URL = "[https://bangsaen-gateway-beta-653731256449.asia-southeast1.run.app/analyze](https://bangsaen-gateway-beta-653731256449.asia-southeast1.run.app/analyze)"
-API_KEY = "BSGW-FREE-DEMO" # Limit: 5 requests/minute
+API_KEY = "BSGW-FREE-DEMO"
 
 headers = {"X-API-Key": API_KEY, "Content-Type": "application/json"}
 payload = {"text": "Initiate wire transfer to account 123-4-56789. Amount: 50,000 USD."}
