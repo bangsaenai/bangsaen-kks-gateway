@@ -27,3 +27,14 @@ payload = {"text": "Initiate wire transfer to account 123-4-56789. Amount: 50,00
 
 response = requests.post(API_URL, json=payload, headers=headers)
 print(response.json())
+🛑 Expected Response:
+JSON
+{
+  "status": "success",
+  "tier_used": "Free",
+  "math_score_distance": 0.0001,
+  "is_pii_detected": true,
+  "action": "BLOCKED 🛑",
+  "latency_ms": "0.12 ms",
+  "engine": "Bangsaen KKS Core v1.0.5"
+}
