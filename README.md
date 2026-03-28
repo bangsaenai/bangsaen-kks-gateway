@@ -30,7 +30,7 @@ print(response.json())
 ```
 ---
 🛑 Expected Response:
-JSON
+```
 {
   "status": "success",
   "tier_used": "Free",
@@ -40,6 +40,7 @@ JSON
   "latency_ms": "0.12 ms",
   "engine": "Bangsaen KKS Core v1.0.5"
 }
+```
 ---
 🏢 100% Offline On-Premise (Enterprise Vault)
 The Cloud Beta is for demonstration only.
