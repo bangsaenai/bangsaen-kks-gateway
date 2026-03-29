@@ -56,3 +56,20 @@ Absolute Privacy: Your data never leaves your infrastructure.
 
 Built with pure mathematics by Bangsaen AI.
 
+---
+(Note: The public beta key is strictly rate-limited to 5 Req/Sec. If you are running a DDoS script and receiving HTTP 429 Too Many Requests, the system is working exactly as intended. Please upgrade to an Enterprise License for load testing.)
+
+🌌 Phase 3: The Microsecond Era (Coming Soon)
+A 3ms response time over the public internet is just a proof of concept.
+
+The final form of the Bangsaen KKS Gateway is designed for On-Premise Bare-Metal C++ and FPGA hardware. Bypassing the network layer entirely, the latency collapses to the microsecond (μs) level—making it air-gapped, zero-latency AI security for Banks, Hospitals, and Defense.
+
+💼 Enterprise Inquiries
+Traditional AI filters are architecturally obsolete. If your organization requires absolute, mathematically provable PII protection, contact us for Enterprise Licensing and On-Premise / FPGA integration.
+
+📧 Email: drtanet@bangsaenai.com
+
+🌐 Website: bangsaenai.com
+
+Bangsaen AI Research Laboratory © 2026. All Rights Reserved.
+
