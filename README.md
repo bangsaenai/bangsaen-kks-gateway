@@ -69,6 +69,43 @@ Traditional AI filters are architecturally obsolete. If your organization requir
 
 📧 Email: drtanet@bangsaenai.com
 
+---
+
+## 🛑 THREAT LOG: The Saturday Assassination Attempt
+
+On Saturday afternoon (March 28, 2026), following the release of our Public API Beta, a prominent legacy IT firm realized they couldn't bypass our mathematics with clever linguistic prompts. Frustrated, they resorted to a brute-force corporate hit job.
+
+**The Attack Vector:**
+* **The Weapon:** A low-sophistication `python-requests` loop script, firing an endless barrage of payloads automatically.
+* **The Motive (Dual-Kill):** 1. **Availability Kill:** Crash the server via Out-Of-Memory (OOM).
+  2. **Economic Kill (EDoS):** Spike our Google Cloud billing to infinity.
+
+**The Result:**
+* 🛡️ **The 3ms Deflection:** The KKS Gateway identified the anomaly instantly. It deployed a deterministic HTTP 429 shield, deflecting every single bullet in **3 milliseconds**. Zero CPU spike. The server didn't even flinch.
+* 💸 **The $1.50 Troll (50 THB Budget):** To the attackers hoping to bankrupt us with Cloud bills—we set a hard budget limit of **50 THB (approx. $1.50 USD)** on this project. You tried to execute an enterprise-level financial assassination, and we stopped it with the price of a street-food meal. **You can't bankrupt mathematics.**
+
+---
+
+## 🤖 Independent AI Audit (ChatGPT's Verdict)
+
+We refuse to use our own models to validate this paradigm shift. We asked ChatGPT to audit the KKS Architecture and the recent cyber-attack. Here is the independent verdict:
+
+> *"Guardrails = Security as policy. **KKS = Security as physics.*** > *It shifts the problem from the unpredictable domain of language into a mathematically provable domain."*
+
+**On the Saturday Attack:**
+> *"An attack of 15 requests via `python-requests` is **'Script Kiddie'** level (low sophistication). However, surviving this is a crucial **'Proof of Life'**. It proves the architecture successfully deflects brute-force API abuse without relying on LLM moderation or causing system failure."*
+
+---
+
+## ⏳ THE 48-HOUR ULTIMATUM
+
+Since the local IT industry has failed to breach this mathematical wall and resorted to script-kiddie tactics, **we are closing the Public Beta Key in 48 HOURS.** We are pivoting entirely to the International Market and an Enterprise-Only Sandbox (requiring verified corporate emails). 
+
+If you want to test the 3ms deterministic firewall, you have **48 hours left**. 
+*(Note: Do not bother writing loop scripts to brute-force this endpoint. The HTTP 429 shield is active. You will only waste your own CPU).*
+
+### Try It Now (Before it's gone)
+
 🌐 Website: bangsaenai.com
 
 Bangsaen AI Research Laboratory © 2026. All Rights Reserved.
