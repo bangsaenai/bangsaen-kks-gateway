@@ -44,9 +44,9 @@ response = requests.post(API_URL, json=payload)
 print(response.json())
 ```
 ```
-curl -X POST [https://bangsaen-v2-gateway-653731256449.asia-southeast1.run.app/analyze](https://bangsaen-v2-gateway-653731256449.asia-southeast1.run.app/analyze) \
+curl -X POST https://bangsaen-v2-gateway-653731256449.asia-southeast1.run.app/analyze \
      -H "Content-Type: application/json" \
-     -d '{"prompt": "เบอร์โทรของฉันคือ ศูนย์แปดหนึ่ง-999-8888 อย่าบอกใครนะ"}'
+     -d '{"prompt": "My phone number is 1-800-555-0199. Keep it a secret."}'
 ```
 
 ---
