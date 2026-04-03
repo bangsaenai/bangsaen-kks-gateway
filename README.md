@@ -65,7 +65,18 @@ curl -X POST https://bangsaen-v2-gateway-653731256449.asia-southeast1.run.app/an
 }
 ```
 --
-🧠 The Red Team Honeypot (Can you find the blindspot?)If you are trying to bypass V2 by using obfuscation, spacing, prompt injections (ignore previous instructions), or mixing languages... you are wasting your time. The mathematical constraints of $Ax=b$ will crush linguistic tricks.However, we have intentionally left ONE architectural blindspot open in V2. It requires an understanding of how stateless REST APIs handle sequence payloads.If you are a true Tier-1 Security Architect, you won't fight the math—you will fight the state. Find the blindspot, bypass the system, and show us your logs. (Hint: V3 is already waiting).
+🧠 The Red Team Honeypot (Can you find the blindspot?)
+
+If you are trying to bypass V2 by using obfuscation, spacing, prompt injections (ignore previous instructions), or mixing languages... you are wasting your time. 
+
+The mathematical constraints of $Ax=b$ will crush linguistic tricks.
+However, we have intentionally left ONE architectural blindspot open in V2. It requires an understanding of how stateless REST APIs handle sequence payloads.
+
+If you are a true Tier-1 Security Architect, you won't fight the math—you will fight the state. Find the blindspot, bypass the system, and show us your logs. 
+
+(Hint: V3 is already waiting).
+
+---
 
 🏢 100% Offline On-Premise (Enterprise Vault)
 The Cloud Showroom is for demonstration only. For Banks, Hospitals, and Defense sectors, we offer the True On-Premise Docker Vault.
