@@ -64,6 +64,40 @@ curl -X POST https://bangsaen-v2-gateway-653731256449.asia-southeast1.run.app/an
   "message": "Deterministic Firewall Blocked the Request. PII or Anomaly detected."
 }
 ```
+## 🚀 Enterprise On-Premise Deployment (Docker)
+
+For System Integrators (SIs) and Enterprise users who require strict data privacy, **Bangsaen Gateway V2** can be deployed 100% offline via Docker. Zero external dependencies. Zero LLM calls for filtering.
+
+### 1. Pull the Mathematical Engine
+Grab the latest image directly from our registry:
+```bash
+docker pull bangsaenaistudio/bangsaen-gateway-v2:latest
+
+```
+
+## 2. Initialize the Vault (Offline Mode)
+
+Start the gateway in your local environment. The GATEWAY_MODE environment variable ensures the system operates as an isolated on-premise vault.
+```bash
+docker run -d -p 8080:8080 -e GATEWAY_MODE=ON_PREMISE_VAULT --name bangsaen-vault bangsaenaistudio/bangsaen-gateway-v2:latest
+
+```
+
+## 3. Verify the 18ms Latency
+
+Test the firewall bypassing the browser directly via Terminal. Our $Ax=b$ mathematical engine will intercept the PII almost instantly.
+
+
+```bash
+curl -X POST http://localhost:8080/analyze \
+     -H "Content-Type: application/json" \
+     -d '{"prompt": "my account is 4567888822"}'
+```
+---
+(Expected Output: Threat Neutralized by Math Engine in < 100ms)
+
+## Note: Built for Production. Use your brain, not a bot. 🧠
+
 --
 🧠 The Red Team Honeypot (Can you find the blindspot?)
 
