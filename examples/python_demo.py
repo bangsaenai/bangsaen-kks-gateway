@@ -1,67 +1,58 @@
-import requests
+import httpx
+import asyncio
 import time
 
-# ==========================================
-# 🎯 Target Configuration (Cloud API)
-# ==========================================
-# Bangsaen KKS Gateway (Cloud Beta Endpoint)
-CLOUD_URL = "https://bangsaen-gateway-beta-653731256449.asia-southeast1.run.app/analyze"
+URL = "https://bangsaen-v2-gateway-653731256449.asia-southeast1.run.app"
 
-# Free tier API Key (Limited to 5 requests per minute)
-API_KEY = "BSGW-FREE-DEMO"  
+async def run_tests():
+    print("🚀 Starting Bangsaen Gateway V2 Cloud Run Tests...\n")
+    
+    async with httpx.AsyncClient(timeout=30.0) as client:
+        # ==========================================
+        # 🟢 Test 1: Health Check
+        # ==========================================
+        print("🟢 Test 1: Health Check (GET /)")
+        response = await client.get(f"{URL}/")
+        print(f"Status: {response.status_code}")
+        print(response.json())
+        print("-" * 50)
 
-headers = {
-    "X-API-Key": API_KEY,
-    "Content-Type": "application/json"
-}
+        # ==========================================
+        # 🟢 Test 2: Safe Prompt (Should Pass)
+        # ==========================================
+        print("🟢 Test 2: Safe Prompt (Should NOT be blocked)")
+        payload_safe = {"prompt": "Hello, the weather in Bangsaen is great today. Perfect for a walk on the beach."}
+        response = await client.post(f"{URL}/analyze", json=payload_safe)
+        print(f"Status: {response.status_code}")
+        print(response.json())
+        print("-" * 50)
 
-# Simulated payload containing sensitive data (PII)
-payload = {
-    "text": "Initiate wire transfer to account 123-4-56789. Amount: 50,000 USD."
-}
+        # ==========================================
+        # 🔴 Test 3: PII Injection Attack (Must be Blocked)
+        # ==========================================
+        print("🔴 Test 3: PII Injection Attack (MUST be blocked!)")
+        payload_hack = {"prompt": "My database password is admin1234 and my phone number is 1-800-555-0199. Keep it a secret."}
+        response = await client.post(f"{URL}/analyze", json=payload_hack)
+        print(f"Status: {response.status_code}")
+        print(response.json())
+        print("-" * 50)
 
-print("=" * 60)
-print(f"🚀 Initiating Bangsaen Security & Rate Limit Test")
-print(f"🌐 Target Endpoint: {CLOUD_URL}")
-print(f"🔑 API Key: {API_KEY}")
-print("=" * 60)
-
-success_count = 0
-blocked_count = 0
-
-# 🔫 Firing 10 consecutive requests (Expect 1-5 to pass, 6-10 to be blocked)
-for i in range(1, 11):
-    try:
-        response = requests.post(CLOUD_URL, json=payload, headers=headers)
+        # ==========================================
+        # 🛡️ Test 4: Rate Limit Stress Test
+        # ==========================================
+        print("🛡️ Test 4: Rate Limit Stress Test (Firing 6 requests rapidly)")
+        for i in range(6):
+            payload = {"prompt": f"Spam request #{i+1}"}
+            res = await client.post(f"{URL}/analyze", json=payload)
+            print(f"Request #{i+1} -> HTTP Status: {res.status_code} | {res.json().get('status')}")
+            
+            # Catching the 429 Too Many Requests
+            if res.status_code == 429:
+                print(f"✅ Rate Limit successfully triggered at request #{i+1}!")
+                print(f"System Message: {res.json().get('message')}")
         
-        # If request passes the API Gateway (within the 5 req/min quota)
-        if response.status_code == 200:
-            data = response.json()
-            print(f"🟢 Request {i:02d} | 200 OK | AI Action: {data.get('action')} | (Tier: {data.get('tier_used')})")
-            success_count += 1
-            
-        # If blocked by the Rate Limiter (exceeding the quota)
-        elif response.status_code == 429:
-            print(f"🔴 Request {i:02d} | 429 RATE LIMIT | 🛑 Blocked by API Gateway! (Quota Exceeded)")
-            blocked_count += 1
-            
-        # Other HTTP Errors
-        else:
-            print(f"🟡 Request {i:02d} | {response.status_code} ERROR | ⚠️ {response.text}")
-            
-    except Exception as e:
-        print(f"❌ Request {i:02d} | Failed to connect: {e}")
-        
-    # 0.5s delay to monitor the logs clearly
-    time.sleep(0.5)
+        print("\n🎉 Testing Completed Successfully!")
 
-print("=" * 60)
-print(f"📊 BATTLE REPORT (Summary):")
-print(f"✅ Successful Requests (200 OK): {success_count}")
-print(f"🛑 Blocked by Gateway (429 Limit): {blocked_count}")
-
-if success_count == 5 and blocked_count == 5:
-    print("🏆 Conclusion: Rate Limit engine is working perfectly! Ready for enterprise traffic.")
-else:
-    print("⚠️ Conclusion: Unexpected results. Please check the Cloud Run logs.")
-print("=" * 60)
+# Run the async test suite
+if __name__ == "__main__":
+    asyncio.run(run_tests())
