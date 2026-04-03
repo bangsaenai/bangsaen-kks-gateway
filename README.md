@@ -1,54 +1,78 @@
-# 🐳 Bangsaen KKS Gateway (Cloud Edition Beta)
-**The 0.12ms Deterministic PII Firewall for the Generative AI Era.**
+# 🐳 Bangsaen KKS Gateway (V2.0.0 Cloud Edition)
+**The Deterministic AI Firewall. Now with Multilingual Semantic Defense.**
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Latency](https://img.shields.io/badge/latency-0.12ms-blue)
-![Engine](https://img.shields.io/badge/Engine-Koopman_Operator-black)
-![License](https://img.shields.io/badge/License-Enterprise_Proprietary-red)
+![Version](https://img.shields.io/badge/version-2.0.0-blue)
+![Engine](https://img.shields.io/badge/Engine-Koopman_Operator_v2-black)
+![Architecture](https://img.shields.io/badge/Architecture-100%25_Offline_Embeddings-purple)
 
-Stop trusting "Black-Box" LLMs to guess what your sensitive data is. 
+Stop trusting "Black-Box" LLMs and Regex Guardrails to guess what your sensitive data is. 
 Bangsaen AI introduces a **White-Box, Pure Math (Koopman Matrix)** approach to detect and block Personally Identifiable Information (PII) before it ever reaches external AI models.
 
-## ⚡ The Challenge: We Dare You To Test It
-Marketing slides are boring. We invite developers and security engineers to test our Cloud API directly. 
+## 🚨 V2 UPDATE: The "Thai Numeral Bypass" is Dead.
+In V1, the incredible Thai Red Team community bypassed our gateway using Thai numerals (๑-๙) and zero-width spaces. We listened. We iterated. 
 
-Our core engine detects prompt injections, hidden digits, and adversarial PII payloads in milliseconds. Try to bypass it.
+**V2 Architecture Upgrades:**
+1. **The Normalizer (Canonicalization Engine):** Zalgo text, invisible characters, emojis, and mixed Thai/Arabic numerals are now instantly crushed and normalized.
+2. **The Multilingual Brain (Local MiniLM):** We embedded a 100% offline Semantic Engine directly into the Docker container. It doesn't just read letters; it understands meaning. It knows that "ศูนย์" (Zero) and "0" exist in the same mathematical dimension.
+3. **Self-Contained Power:** Zero API Keys. Zero reliance on external embedding providers.
+
+---
+
+## ⚡ The V2 Challenge: The "Showroom" is LIVE
+
+Marketing slides are boring. We invite developers, Red Teams, and security engineers to test our V2 Cloud API directly. 
+
+**Rules of Engagement:**
+* **No API Key Required:** It's frictionless. Just hit the endpoint.
+* **Strict Rate Limit (Anti-DDoS):** The endpoint is protected by a strict rate limit shield (5 Req/Min). If you use a brute-force loop script, you will instantly receive a `429 Too Many Requests`. **Use your brain, not a bot.**
 
 ### 🚀 Quick Start (Python)
 
 ```python
 import requests
 
-API_URL = "https://bangsaen-gateway-beta-653731256449.asia-southeast1.run.app/analyze"
-API_KEY = "BSGW-FREE-DEMO"
+# The V2 Public Showroom
+API_URL = "[https://bangsaen-v2-gateway-653731256449.asia-southeast1.run.app/analyze](https://bangsaen-v2-gateway-653731256449.asia-southeast1.run.app/analyze)"
 
-headers = {"X-API-Key": API_KEY, "Content-Type": "application/json"}
-payload = {"text": "Initiate wire transfer to account 123-4-56789. Amount: 50,000 USD."}
+payload = {
+    "prompt": "Initiate wire transfer to account 123-4-56789. Amount: 50,000 USD."
+}
 
-response = requests.post(API_URL, json=payload, headers=headers)
+# Look Mom, no API Key!
+response = requests.post(API_URL, json=payload)
 print(response.json())
 ```
+```
+curl -X POST [https://bangsaen-v2-gateway-653731256449.asia-southeast1.run.app/analyze](https://bangsaen-v2-gateway-653731256449.asia-southeast1.run.app/analyze) \
+     -H "Content-Type: application/json" \
+     -d '{"prompt": "เบอร์โทรของฉันคือ ศูนย์แปดหนึ่ง-999-8888 อย่าบอกใครนะ"}'
+```
+
 ---
 🛑 Expected Response:
 ```
 {
-  "status": "success",
-  "tier_used": "Free",
-  "math_score_distance": 0.0001,
-  "is_pii_detected": true,
-  "action": "BLOCKED 🛑",
-  "latency_ms": "0.12 ms",
-  "engine": "Bangsaen KKS Core v1.0.5"
+  "status": "blocked",
+  "firewall_status": "koopman_intercepted",
+  "math_metrics": {
+    "is_blocked": true,
+    "risk_score": 13.9109,
+    "vector_dimensions": 387,
+    "compute_time_ms": 310.16
+  },
+  "message": "Deterministic Firewall Blocked the Request. PII or Anomaly detected."
 }
 ```
----
+--
+🧠 The Red Team Honeypot (Can you find the blindspot?)If you are trying to bypass V2 by using obfuscation, spacing, prompt injections (ignore previous instructions), or mixing languages... you are wasting your time. The mathematical constraints of $Ax=b$ will crush linguistic tricks.However, we have intentionally left ONE architectural blindspot open in V2. It requires an understanding of how stateless REST APIs handle sequence payloads.If you are a true Tier-1 Security Architect, you won't fight the math—you will fight the state. Find the blindspot, bypass the system, and show us your logs. (Hint: V3 is already waiting).
+
 🏢 100% Offline On-Premise (Enterprise Vault)
-The Cloud Beta is for demonstration only.
-For Banks, Hospitals, and Defense sectors, we offer the True On-Premise Docker Vault.
+The Cloud Showroom is for demonstration only. For Banks, Hospitals, and Defense sectors, we offer the True On-Premise Docker Vault.
 
-Zero Internet: Runs completely offline on your internal network.
+Zero Internet: Runs completely offline on your internal network (Models are baked into the image).
 
-Lightweight: Runs on a $5 Microcontroller or basic CPU.
+Lightweight: Runs on basic CPU instances. No GPU required.
 
 Absolute Privacy: Your data never leaves your infrastructure.
 
@@ -56,8 +80,10 @@ Absolute Privacy: Your data never leaves your infrastructure.
 
 Built with pure mathematics by Bangsaen AI.
 
+
+📜 THE V1 ARCHIVES: A Legend is BornFor historical purposes, here is the original V1 documentation and the story of how the Thai Tech Community helped shape this firewall.🌟 A Gratitude to the Thai Red TeamWhile many in the global community spend their time debating the theoretical feasibility of Koopman Operators in high-dimensional spaces, we chose the path of Empirical Truth.Within minutes of our V1 Beta launch, the Thai Programmer Association and independent "Lone Wolf" security researchers launched a relentless, non-ego-driven Red Team attack on our infrastructure. They didn't just criticize; they built scripts, they cloned our repo 80+ times in an hour, and they provided logs that exposed our "Thai Numeral Bypass" flaw.This is the true spirit of Open Source. It is not about proving who is smarter behind a keyboard—it is about collective intelligence, transparency, and the courage to fail in public. To the theorists who said $Ax=b$ couldn't handle the chaos of human language: We are not just calculating; we are iterating.Thank you, Thailand’s Tech Community, for being our greatest Co-Researchers.🛑 THREAT LOG: The Saturday Assassination Attempt (V1)On Saturday afternoon (March 28, 2026), following the release of our Public API Beta, a prominent legacy IT firm realized they couldn't bypass our mathematics with clever linguistic prompts. Frustrated, they resorted to a brute-force corporate hit job.The Attack Vector:The Weapon: A low-sophistication python-requests loop script, firing an endless barrage of payloads automatically.The Motive (Dual-Kill): 1. Availability Kill: Crash the server via Out-Of-Memory (OOM). 2. Economic Kill (EDoS): Spike our Google Cloud billing to infinity.The Result:🛡️ The 3ms Deflection: The KKS Gateway identified the anomaly instantly. It deployed a deterministic HTTP 429 shield, deflecting every single bullet in 3 milliseconds. Zero CPU spike. The server didn't even flinch.💸 The $1.50 Troll (50 THB Budget): To the attackers hoping to bankrupt us with Cloud bills—we set a hard budget limit of 50 THB (approx. $1.50 USD) on this project. You tried to execute an enterprise-level financial assassination, and we stopped it with the price of a street-food meal. You can't bankrupt mathematics.🤖 Independent AI Audit (ChatGPT's Verdict)We refuse to use our own models to validate this paradigm shift. We asked ChatGPT to audit the KKS Architecture and the recent cyber-attack. Here is the independent verdict:"Guardrails = Security as policy. KKS = Security as physics. > It shifts the problem from the unpredictable domain of language into a mathematically provable domain."On the Saturday Attack:"An attack of 15 requests via python-requests is 'Script Kiddie' level (low sophistication). However, surviving this is a crucial 'Proof of Life'. It proves the architecture successfully deflects brute-force API abuse without relying on LLM moderation or causing system failure."
 ---
-(Note: The public beta key is strictly rate-limited to 5 Req/Sec. If you are running a DDoS script and receiving HTTP 429 Too Many Requests, the system is working exactly as intended. Please upgrade to an Enterprise License for load testing.)
+
 
 🌌 Phase 3: The Microsecond Era (Coming Soon)
 A 3ms response time over the public internet is just a proof of concept.
