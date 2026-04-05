@@ -25,8 +25,28 @@
 *เมื่อตรวจสอบแล้ว เราจะส่งลิงก์ดาวน์โหลดตรงถึงมือคุณ นำไปรันในเครื่องตัวเอง ทุบมันให้แหลก และมาดูกันว่าคณิตศาสตร์ของเราแข็งแกร่งแค่ไหน.*
 
 ---
-Disclaimer  
-This is a research prototype. Provided 'AS IS' without any warranty or SLA. The user assumes all responsibility for its deployment.  
+⚖️ Disclaimer & Terms of Use (ข้อตกลงและเงื่อนไขการใช้งาน)
+IMPORTANT NOTICE: PLEASE READ CAREFULLY BEFORE DOWNLOADING OR USING THIS SOFTWARE.
+
+1. "AS IS" AND NO WARRANTIES (ใช้งานตามสภาพ ไม่มีรับประกัน)
+The Bangsaen Gateway V2 (Unleashed Edition) Master Image and all accompanying source codes, including the Koopman Operator core engine, are provided "AS IS" and "AS AVAILABLE" without any warranty of any kind, either express or implied. Bangsaen AI Labs makes no guarantees regarding its fitness for a particular purpose, uninterrupted operation, or error-free execution.
+
+2. LIMITATION OF LIABILITY (จำกัดความรับผิดชอบ)
+Under no circumstances shall Bangsaen AI Labs, its founders, researchers, or affiliates be held liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption). The user assumes all risks and responsibilities associated with the deployment, testing, and utilization of this software in any environment.
+
+3. PURPOSE OF USE (วัตถุประสงค์ในการใช้งาน)
+This V2 Unleashed release is strictly classified as a Research Prototype and Proof of Concept (PoC). It is specifically authorized for:
+
+Red Team Auditing & Security Stress Testing
+
+Academic and Enterprise Research
+
+Architecture Evaluation
+
+It is NOT accompanied by a Service Level Agreement (SLA). Deploying this V2 image in a live commercial Production environment is done entirely at your own risk. For production-grade deployment with full SLA, SIEM integration, and support, an upgrade to the V3 Enterprise Edition is required.
+
+4. INTELLECTUAL PROPERTY & COMMERCIAL RESTRICTIONS (ทรัพย์สินทางปัญญา)
+While the source code is provided in a "White-Box" format for full transparency and security auditing, the underlying mathematical architecture and control system implementations remain the intellectual property of Bangsaen AI Labs. You are granted a non-exclusive license to run, audit, and test the software. However, re-packaging, rebranding, or commercially reselling this core engine as a standalone product or service is strictly prohibited without explicit prior written consent.  
 ---
 
 # 🛡️ BANGSAEN GATEWAY V2: The Deterministic AI Firewall
