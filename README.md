@@ -25,6 +25,9 @@
 *เมื่อตรวจสอบแล้ว เราจะส่งลิงก์ดาวน์โหลดตรงถึงมือคุณ นำไปรันในเครื่องตัวเอง ทุบมันให้แหลก และมาดูกันว่าคณิตศาสตร์ของเราแข็งแกร่งแค่ไหน.*
 
 ---
+Disclaimer  
+This is a research prototype. Provided 'AS IS' without any warranty or SLA. The user assumes all responsibility for its deployment.  
+---
 
 # 🛡️ BANGSAEN GATEWAY V2: The Deterministic AI Firewall
 
