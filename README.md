@@ -5,7 +5,7 @@
 > Once the clock hits zero this Friday, this repository will be permanently locked. The Koopman Deterministic Architecture will become a closed-door Enterprise secret (V3). No exceptions.
 > 
 > ⏳ **Watch the live countdown and read the final architectural statement:**
-> 👉 [**[ CHECK LIVE COUNTDOWN CLOCK ]**](https://bangsaenai.com/white-paper.html) *(Note: Replace with your actual domain if different)*
+> 👉 [**[ CHECK LIVE COUNTDOWN CLOCK ]**](https://bangsaenai.com/white-paper.html) 
 > 
 > ---
 
