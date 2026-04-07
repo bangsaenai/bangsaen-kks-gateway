@@ -1,3 +1,17 @@
+> 🚨 **[CRITICAL UPDATE: 72-HOUR COUNTDOWN INITIATED]** 🚨
+> 
+> **Bangsaen Gateway V2 Public Access is officially closing.** > We are pulling the plug. To the 117+ unique engineering teams who have already cloned this repository: you now hold the legacy snapshot. 
+> 
+> Once the clock hits zero this Friday, this repository will be permanently locked. The Koopman Deterministic Architecture will become a closed-door Enterprise secret (V3). No exceptions.
+> 
+> ⏳ **Watch the live countdown and read the final architectural statement:**
+> 👉 [**[ CHECK LIVE COUNTDOWN CLOCK ]**](https://bangsaenai.com/white-paper.html) *(Note: Replace with your actual domain if different)*
+> 
+> ---
+
+
+
+
 # 🇹🇭 ถึงเวลานักพัฒนาไทย โต้กลับ Silicon Valley: เปิดกรุ Bangsaen V2 (White-Box Unleashed)
 
 **"AI Gateway ไม่จำเป็นต้อง Scale Up ด้วย GPU ราคาแพง แต่เราสามารถ Scale Out ด้วย Math + Stateless Design"** ตลอดเวลาที่ผ่านมา วงการ AI ไทยมักตกเป็น "ผู้บริโภค" เทคโนโลยีของตะวันตก เราถูกบีบให้ต้องเช่า Cloud ราคาแพง ซื้อ GPU มหาศาล และยอมรับโมเดลความน่าจะเป็น (Probabilistic) ที่ไม่เคยเข้าใจความซับซ้อนของภาษาไทยอย่างแท้จริง (สระซ้อน, เลขไทย ๑๒๓, Context ที่ไม่มีสเปซบาร์)
