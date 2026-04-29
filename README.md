@@ -1,13 +1,4 @@
-> 🚨 **[CRITICAL UPDATE: 72-HOUR COUNTDOWN INITIATED]** 🚨
-> 
-> **Bangsaen Gateway V2 Public Access is officially closing.** > We are pulling the plug. To the 117+ unique engineering teams who have already cloned this repository: you now hold the legacy snapshot. 
-> 
-> Once the clock hits zero this Friday, this repository will be permanently locked. The Koopman Deterministic Architecture will become a closed-door Enterprise secret (V3). No exceptions.
-> 
-> ⏳ **Watch the live countdown and read the final architectural statement:**
-> 👉 [**[ CHECK LIVE COUNTDOWN CLOCK ]**](https://bangsaenai.com/white-paper.html) 
-> 
-> ---
+
 
 # 🧨 Bangsaen KKS Gateway: Destructive AI ตัวแรกของโลก
 ### "หยุดการเดา แล้วเข้าสู่การควบคุมอย่างสมบูรณ์แบบ"
